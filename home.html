@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Payment Now</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+
+      <h>Make Your Payment Now
+
+  <form id="paymentForm">
+    <div>
+      <label>Enter Amount</label><br>
+      <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+    </div>
+
+    <div style="margin-top:15px;">
+      <label>Choose Payment Method</label><br>
+     <div class="payment-methods">
+  <div class="method">
+    <img src="mpesa.png" alt="Mpesa logo">
+    <p>Mpesa</p>
+  </div>
+  <div class="method">
+    <img src="paypal.png" alt="Paypal logo">
+    <p>Paypal</p>
+  </div>
+  <div class="method">
+    <img src="visa.png" alt="Visa logo">
+    <p>Visa</p>
+  </div>
+</div>
+      
+    </div>
+
+    <div style="margin-top:20px;">
+      <button type="submit">Proceed to Pay</button>
+    </div>
+  </form>
+
+  <p id="message"></p>
+  </div>
+</body>
+</html>
