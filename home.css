@@ -9,8 +9,13 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60%;
+  height: 80%;
   background-color: rgb(220, 236, 236);
+}
+.heading {
+  justify-content: center;
+  
+
 }
 .payment-methods {
   display: flex;
