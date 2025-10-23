@@ -1,33 +1,40 @@
 html, body {
   height: 100%;
-  margin: 60;
+  margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
+/* Container styling */
 .container {
-    
-max-width: 900px;
-margin: 40px auto;
-background-color: #e9ecea;
-border-radius: 10px;
-padding: 30px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #e9ecea;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-.heading {
-  justify-content: center;
-  
 
+/* Heading section */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
+
+/* Payment methods layout */
 .payment-methods {
   display: flex;
-  justify-content: center;     /* centers the cards horizontally */
+  justify-content: center;
   align-items: center;
-  gap: 15px;                   /* space between cards */
+  gap: 15px;
   margin-bottom: 20px;
-  flex-wrap: wrap;             /* allows wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
+/* Each payment method card */
 .method {
   border: 1px solid #ccc;
   padding: 15px;
@@ -35,9 +42,9 @@ text-align: center;
   text-align: center;
   cursor: pointer;
   width: 90px;
-  transition: 0.3s;
   background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
 }
 
 .method:hover {
@@ -46,9 +53,46 @@ text-align: center;
   transform: scale(1.05);
 }
 
+/* Selected method visual feedback */
+.method.selected {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+}
+
+/* Payment method logo */
 .method img {
   width: 40px;
   height: 40px;
   margin-bottom: 5px;
 }
 
+/* Input and button styling */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Message feedback */
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+}

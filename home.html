@@ -7,42 +7,43 @@
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <div class="container">
-
-      <div class="heading">
+  <div class="container">
+    <header class="heading">
       <h1>Make Your Payment Now</h1>
+    </header>
+
+    <form id="paymentForm">
+      <div class="form-group">
+        <label for="amount">Enter Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+      </div>
+
+      <div class="form-group">
+        <label>Choose Payment Method</label>
+        <div class="payment-methods">
+          <div class="method" data-method="mpesa">
+            <img src="mpesa.png" alt="Mpesa logo">
+            <p>Mpesa</p>
           </div>
-  <form id="paymentForm">
-    <div>
-      <label>Enter Amount</label><br>
-      <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
-    </div>
+          <div class="method" data-method="paypal">
+            <img src="paypal.png" alt="Paypal logo">
+            <p>Paypal</p>
+          </div>
+          <div class="method" data-method="visa">
+            <img src="visa.png" alt="Visa logo">
+            <p>Visa</p>
+          </div>
+        </div>
+      </div>
 
-    <div style="margin-top:15px;">
-      <label>Choose Payment Method</label><br>
-     <div class="payment-methods">
-  <div class="method">
-    <img src="mpesa.png" alt="Mpesa logo">
-    <p>Mpesa</p>
-  </div>
-  <div class="method">
-    <img src="paypal.png" alt="Paypal logo">
-    <p>Paypal</p>
-  </div>
-  <div class="method">
-    <img src="visa.png" alt="Visa logo">
-    <p>Visa</p>
-  </div>
-</div>
-      
-    </div>
+      <div class="form-group">
+        <button type="submit">Proceed to Pay</button>
+      </div>
+    </form>
 
-    <div style="margin-top:20px;">
-      <button type="submit">Proceed to Pay</button>
-    </div>
-  </form>
-
-  <p id="message"></p>
+    <p id="message"></p>
   </div>
+
+  <script src="home.js"></script>
 </body>
 </html>
