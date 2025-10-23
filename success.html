@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Processing</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f8f9fa;
+      font-family: Arial, sans-serif;
+      flex-direction: column;
+    }
+
+    .loader {
+      border: 6px solid #e0e0e0;
+      border-top: 6px solid #007bff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #homeButton {
+      display: none;
+      margin-top: 25px;
+      padding: 10px 25px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #homeButton:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <p class="message" id="statusMessage">Verifying payment...</p>
+  <button id="homeButton" onclick="goHome()">Go to Home</button>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('statusMessage').textContent = 'Payment verified successfully.';
+      document.getElementById('homeButton').style.display = 'block';
+      document.querySelector('.loader').style.display = 'none';
+    }, 3000);
+
+    function goHome() {
+      window.location.href = 'home.html';
+    }
+  </script>
+</body>
+</html>

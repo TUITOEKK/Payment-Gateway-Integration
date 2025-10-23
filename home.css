@@ -122,18 +122,31 @@ button:hover {
   font-weight: bold;
 }
 
-/* Confirmation popup */
-.confirmation-box {
+/* Popup styling */
+.popup {
   display: none;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  text-align: center;
-  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
-.confirm-buttons {
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.popup-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;

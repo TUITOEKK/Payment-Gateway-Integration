@@ -1,7 +1,7 @@
 const methods = document.querySelectorAll('.method');
 const message = document.getElementById('message');
 const paymentDetails = document.querySelectorAll('.payment-details');
-const confirmationBox = document.getElementById('confirmationBox');
+const confirmationPopup = document.getElementById('confirmationPopup');
 const confirmText = document.getElementById('confirmText');
 const confirmYes = document.getElementById('confirmYes');
 const confirmNo = document.getElementById('confirmNo');
@@ -29,7 +29,6 @@ methods.forEach(method => {
 document.getElementById('paymentForm').addEventListener('submit', e => {
   e.preventDefault();
   message.textContent = '';
-  confirmationBox.style.display = 'none';
   message.style.color = 'red';
 
   const amount = document.getElementById('amount').value.trim();
@@ -82,20 +81,17 @@ document.getElementById('paymentForm').addEventListener('submit', e => {
     displayDetail = '**** **** **** ' + card.slice(-4);
   }
 
-  // Show confirmation box
   confirmText.textContent = `Confirm payment of ${amount} using ${selectedMethod.toUpperCase()} (${displayDetail})`;
-  confirmationBox.style.display = 'block';
+  confirmationPopup.style.display = 'flex';
 });
 
-// Handle confirm and cancel
 confirmYes.addEventListener('click', () => {
-  message.style.color = 'green';
-  message.textContent = 'Payment confirmed successfully.';
-  confirmationBox.style.display = 'none';
+  confirmationPopup.style.display = 'none';
+  window.location.href = 'success.html';
 });
 
 confirmNo.addEventListener('click', () => {
-  message.textContent = 'Payment canceled.';
+  confirmationPopup.style.display = 'none';
   message.style.color = 'orange';
-  confirmationBox.style.display = 'none';
+  message.textContent = 'Payment canceled.';
 });
