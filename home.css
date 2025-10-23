@@ -5,7 +5,7 @@ html, body {
   background-color: #f8f9fa;
 }
 
-/* Container styling */
+/* Container */
 .container {
   max-width: 900px;
   margin: 40px auto;
@@ -16,7 +16,7 @@ html, body {
   text-align: center;
 }
 
-/* Heading section */
+/* Heading */
 .heading {
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ html, body {
   margin-bottom: 20px;
 }
 
-/* Payment methods layout */
+/* Payment methods */
 .payment-methods {
   display: flex;
   justify-content: center;
@@ -34,7 +34,6 @@ html, body {
   flex-wrap: wrap;
 }
 
-/* Each payment method card */
 .method {
   border: 1px solid #ccc;
   padding: 15px;
@@ -43,7 +42,7 @@ html, body {
   cursor: pointer;
   width: 90px;
   background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: 0.2s;
 }
 
@@ -53,21 +52,19 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Selected method visual feedback */
 .method.selected {
   border-color: #007bff;
   background-color: #e6f0ff;
 }
 
-/* Payment method logo */
 .method img {
   width: 40px;
   height: 40px;
   margin-bottom: 5px;
 }
 
-/* Input and button styling */
-input[type="number"] {
+/* Input fields */
+input[type="number"], input[type="text"], input[type="email"] {
   width: 100%;
   padding: 10px;
   border-radius: 6px;
@@ -76,6 +73,33 @@ input[type="number"] {
   font-size: 16px;
 }
 
+/* Payment details dropdown */
+.payment-details {
+  display: none;
+  margin-top: 15px;
+  margin-bottom: 25px; /* added spacing before button */
+  text-align: left;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.payment-details label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.payment-details input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Button */
 button {
   width: 100%;
   padding: 12px;

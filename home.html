@@ -36,6 +36,30 @@
         </div>
       </div>
 
+      <!-- Mpesa Fields -->
+      <div class="payment-details" id="mpesa-details">
+        <label for="mpesaNumber">Mpesa Phone Number</label>
+        <input type="text" id="mpesaNumber" name="mpesaNumber" placeholder="07XXXXXXXX">
+      </div>
+
+      <!-- PayPal Fields -->
+      <div class="payment-details" id="paypal-details">
+        <label for="paypalEmail">PayPal Email</label>
+        <input type="email" id="paypalEmail" name="paypalEmail" placeholder="example@email.com">
+      </div>
+
+      <!-- Visa Fields -->
+      <div class="payment-details" id="visa-details">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX">
+
+        <label for="expiry">Expiry Date</label>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123">
+      </div>
+
       <div class="form-group">
         <button type="submit">Proceed to Pay</button>
       </div>
